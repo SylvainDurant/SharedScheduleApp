@@ -1,0 +1,33 @@
+<mat-toolbar color="accent" class="d-flex justify-content-between text-center">
+
+    <div class="scheduleSelector">
+        <button mat-button >Ferrieres</button>
+        <button mat-button >Hymiée</button>
+        <button mat-button >Add...</button>
+    </div>
+
+    <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+
+    <div class="d-flex align-items-center">
+        <div class="btn-group">
+            <button class="btn btn-outline-primary" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate">
+                Prev
+            </button>
+            <button class="btn btn-outline-primary" mwlCalendarToday [(viewDate)]="viewDate">
+                Today
+            </button>
+            <button class="btn btn-outline-primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate">
+                Next
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+
+<div [ngSwitch]="view">
+    <mwl-calendar-month-view 
+        (dayClicked)="dayClicked($event.day)"
+        *ngSwitchCase="CalendarView.Month" 
+        [viewDate]="viewDate" 
+        [events]="events">
+    </mwl-calendar-month-view>
+</div>

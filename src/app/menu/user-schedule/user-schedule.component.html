@@ -1,1 +1,11 @@
-<p>user-schedule works!</p>
+<h4 *ngIf="events.length == 0">Nothing here... yet.</h4>
+<div class="eventCard my-2 text-dark px-2" *ngFor="let event of events" >
+    <button class="btn"><fa-icon [icon]="iconDelete"></fa-icon></button>
+    <button class="btn"><fa-icon [icon]="iconEdit"></fa-icon></button>
+    <h2>{{event.name}}</h2>
+    <a href="#"><fa-icon [icon]="iconCalendar"></fa-icon> {{event.calendar}}</a>
+    <div class="d-flex text-muted">
+        <p class="pr-2">start: {{event.start}}</p>
+        <p *ngIf="event.end">end: {{event.end}}</p>
+    </div>
+</div>
