@@ -4,26 +4,12 @@
 
 .flex-container {
     display: flex;
-    flex-wrap: wrap;
-    height: 91%;
 }
 
-.flex-item-left {
-    background-color: #f1f1f1;
-    flex: 25%;
-}
-  
 .flex-item-right {
-    background-color: dodgerblue;
-    flex: 75%;
+    flex: 0%;
 }
 
-@media (max-width: 800px) {
-    .flex-container {
-        height: 100%;
-    }
-
-    .flex-item-right, .flex-item-left {
-      flex: 100%;
-    }
+.drawerContent{
+max-width: 300px;
 }
