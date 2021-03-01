@@ -5,10 +5,10 @@ const port = process.env.PORT || 3080;
 
 
 app.use(bodyParser.json());
-app.use(express.static(process.cwd()+"/my-app/dist/SharedScheduleApp/"));
+app.use(express.static(__dirname+"/my-app/dist/SharedScheduleApp/"));
 
 app.get('/', (req,res) => {
-  res.sendFile(process.cwd()+"/my-app/dist/SharedScheduleApp/index.html")
+  res.sendFile(__dirname+"/my-app/dist/SharedScheduleApp/index.html")
 });
 
 app.listen(port, () => {

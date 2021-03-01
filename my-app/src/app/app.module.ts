@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { HttpClientModule } from '@angular/common/http';
 
 ///// Calendar /////
 import { CalendarModule, DateAdapter } from 'angular-calendar';
@@ -17,7 +18,6 @@ import { MenuComponent } from './menu/menu.component';
 import { AccountComponent } from './menu/account/account.component';
 import { UserScheduleComponent } from './menu/user-schedule/user-schedule.component';
 import { SchedulesComponent } from './schedules/schedules.component';
-import { MeteoComponent } from './schedules/meteo/meteo.component';
 import { ScheduleComponent } from './schedules/schedule/schedule.component';
 import { TestComponent } from './menu/test/test.component';
 
@@ -28,7 +28,6 @@ import { TestComponent } from './menu/test/test.component';
     AccountComponent,
     UserScheduleComponent,
     SchedulesComponent,
-    MeteoComponent,
     ScheduleComponent,
     TestComponent
   ],
@@ -41,7 +40,8 @@ import { TestComponent } from './menu/test/test.component';
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
