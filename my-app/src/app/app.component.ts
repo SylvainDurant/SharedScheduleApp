@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{
 
   show = true;
 
@@ -25,3 +26,16 @@ export class AppComponent {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
