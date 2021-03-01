@@ -1,11 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TodosComponent } from './todos/todos.component';
+import { AccountComponent } from './menu/account/account.component';
+import { TestComponent } from './menu/test/test.component';
+import { UserScheduleComponent } from './menu/user-schedule/user-schedule.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/todos', pathMatch: 'full'},
-  { path: 'todos', component: TodosComponent},
-  { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) }
+  {
+    path:'account',
+    component: AccountComponent
+  },
+  {
+    path:'userSchedule',
+    component: UserScheduleComponent
+  },
+  {
+    path:'test',
+    component:TestComponent
+  }
 ];
 
 @NgModule({

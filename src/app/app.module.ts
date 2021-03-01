@@ -3,29 +3,45 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './todos/todos.component';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './shared/material.module';
-import { NgSharedModule } from 'projects/ng-shared/src/public-api';
-import { StoreModule } from "@ngrx/store";
-import { MyCounterComponent } from './my-counter/my-counter.component';
-import { counterReducer } from './counter.reducer';
+import { MaterialModule } from './shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { HttpClientModule } from '@angular/common/http';
+
+///// Calendar /////
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
+///// Components /////
+import { MenuComponent } from './menu/menu.component';
+import { AccountComponent } from './menu/account/account.component';
+import { UserScheduleComponent } from './menu/user-schedule/user-schedule.component';
+import { SchedulesComponent } from './schedules/schedules.component';
+import { ScheduleComponent } from './schedules/schedule/schedule.component';
+import { TestComponent } from './menu/test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent,
-    MyCounterComponent
+    MenuComponent,
+    AccountComponent,
+    UserScheduleComponent,
+    SchedulesComponent,
+    ScheduleComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgSharedModule,
-    StoreModule.forRoot({count: counterReducer})
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
