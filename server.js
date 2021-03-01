@@ -15,7 +15,7 @@ app.use(requireHTTPS);
 
 app.use(express.static('./dist/shared-schedule-app'));
 
-app.get('/*', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile('index.html', {root: 'dist/shared-schedule-app/'}
   );
 });
