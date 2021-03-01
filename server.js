@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const port = process.env.PORT || 3080;
 
 
+
 app.use(bodyParser.json());
 app.use(express.static("./my-app/dist/SharedScheduleApp/"));
 
