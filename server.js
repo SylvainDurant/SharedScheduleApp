@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(express.static("./my-app/dist/SharedScheduleApp/"));
 
 app.get('/', (req,res) => {
-  res.sendFile("./my-app/dist/SharedScheduleApp/index.html")
+  res.render("./my-app/dist/SharedScheduleApp/index.html")
 });
 
 app.listen(port, () => {
