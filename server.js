@@ -1,4 +1,4 @@
-///// ng-architecture /////
+///// shared-schedule-app /////
 
 function requireHTTPS(req, res, next) {
     // The 'x-forwarded-proto' check is for Heroku
@@ -13,10 +13,10 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/ng-architecture'));
+app.use(express.static('./dist/shared-schedule-app'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/ng-architecture/'}
+    res.sendFile('index.html', {root: 'dist/shared-schedule-app/'}
   );
 });
 

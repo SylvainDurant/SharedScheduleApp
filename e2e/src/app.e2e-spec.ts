@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('Angular Architecture');
+    expect(await page.getTitleText()).toEqual('SharedScheduleApp app is running!');
   });
 
   afterEach(async () => {
