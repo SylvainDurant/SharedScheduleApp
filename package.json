@@ -1,56 +1,19 @@
 {
-  "name": "shared-schedule-app",
-  "version": "0.0.0",
+  "name": "ss2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
-    "ng": "ng",
-    "start": "node app.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node index.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@angular/animations": "~11.1.2",
-    "@angular/cdk": "^11.2.0",
-    "@angular/cli": "~11.1.4",
-    "@angular/common": "~11.1.2",
-    "@angular/compiler": "~11.1.2",
-    "@angular/compiler-cli": "~11.1.2",
-    "@angular/core": "~11.1.2",
-    "@angular/forms": "~11.1.2",
-    "@angular/material": "^11.2.0",
-    "@angular/platform-browser": "~11.1.2",
-    "@angular/platform-browser-dynamic": "~11.1.2",
-    "@angular/router": "~11.1.2",
-    "@fortawesome/angular-fontawesome": "^0.8.2",
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "angular-calendar": "^0.28.22",
-    "bootstrap": "^4.6.0",
-    "date-fns": "^2.17.0",
-    "express": "^4.17.1",
-    "path": "^0.12.7",
-    "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1101.4",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.20.1",
-    "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.2.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.1.2"
+    "nodemon": "^2.0.7"
   }
 }
