@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <span class="title" [routerLink]="['/']">Angular Architecture</span>
+    <span class="spacer"></span>
+    <div>
+        <button mat-button [routerLink]="['/']">Home</button>
+        <button mat-button [routerLink]="['/todos']">Todos</button>
+        <button mat-button [routerLink]="['/users']">Users</button>
+    </div>
+</mat-toolbar>
+
+<!-- <lib-ng-shared></lib-ng-shared> -->
+<app-my-counter></app-my-counter>
+
+<router-outlet></router-outlet>
