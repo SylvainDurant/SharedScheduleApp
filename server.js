@@ -12,11 +12,22 @@ const port = process.env.PORT || 3080;
 const express = require('express');
 const app = express();
 app.use(requireHTTPS);
+const dotenv = require("dotenv");
+const mongoose = require('mongoose');
 
-app.use(express.static('./dist/shared-schedule-app'));
+dotenv.config();
+///// mongoose /////
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
+mongoose.set('useCreateIndex', true);
+mongoose.connect(process.env.DB_CONNECT)
+.then(() => console.log('connected to DB'))
+.catch((err)=> console.log(err));
+
+app.use(express.static('./my-app/dist/shared-schedule-app'));
 
 app.get('/', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/shared-schedule-app/'}
+    res.sendFile('index.html', {root: 'my-app/dist/shared-schedule-app/'}
   );
 });
 
